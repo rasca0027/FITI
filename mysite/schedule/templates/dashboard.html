@@ -1,0 +1,11 @@
+<b>you are {{ name }} </b><br>
+<br>
+your schedule is:<br>
+<ul>
+{% for i in schedule %}
+    <li>time:{{ i.time }} with tutor: {{ i.tutor }}</li>
+{% endfor %}
+</ul>
+<br>
+want to book more schedule with tutors? <br>
+<a href="/schedule/book/">book here!</a>

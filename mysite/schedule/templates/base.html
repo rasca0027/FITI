@@ -1,0 +1,15 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {% for prof, time_slot in time_dict.iteritems %}
+        <b>{{ prof }}</b>
+        {% for slot in time_slot %}
+            <label>
+                <input type="radio" name="time_{{ prof }}" value="{{ slot }}"> 
+                {{ slot }}
+            </label>
+        {% endfor %}
+        <br>
+    {% endfor %}
+    <br>
+    <input type="submit" value="Submit" />
+</form>
